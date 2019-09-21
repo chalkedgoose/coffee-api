@@ -1,0 +1,21 @@
+# coffeeshops we're tracking
+type CoffeeShop{
+    _id: ID!
+    title: String!
+    description: String!
+    longitude: Float!
+    latitude: Float!
+}
+
+# root query 
+type Query {
+    coffeeshops: [CoffeeShop!]!
+}
+
+# root mutation
+type Mutation { 
+    createCoffeeShop( title: String,
+    description: String,
+    longitude: Float,
+    latitude: Float ): CoffeeShop!
+}
